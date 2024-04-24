@@ -43,25 +43,25 @@ RUN apt-get update && \
     gedit \
     gimp 
 
-#RUN apt-get update && \
-#    apt-get upgrade -y && \
-#    mkdir -p /home/ubuntu/catkin_ws/src && \
-#    /bin/bash -c "source /opt/ros/noetic/setup.bash; cd /home/ubuntu/catkin_ws/src; catkin_init_workspace" && \
-#    /bin/bash -c "source /opt/ros/noetic/setup.bash; cd /home/ubuntu/catkin_ws; catkin build" && \
-#    cd /home/ubuntu/catkin_ws/src && \
-#    git clone https://github.com/KBKN-Autonomous-Robotics-Lab/IGVC2023-src.git && \
-#    rm IGVC2023-src/CMakeLists.txt && \
-#    mv IGVC2023-src/* . && \mv IGVC2023-src/.git* . && \
-#    rm -rf IGVC2023-src && \
-#    bash setup.sh && \
-#    /bin/bash -c "source /opt/ros/noetic/setup.bash" && \
-#    catkin clean --yes && \
-#    chown -R $USER:$USER $HOME && \
-#    echo "source /home/ubuntu/catkin_ws/devel/setup.bash" >> ~/.bashrc && \
-#    echo "export ROS_WORKSPACE=/home/ubuntu/catkin_ws" >> ~/.bashrc && \
-#    echo "alias cm='cd ~/catkin_ws;catkin build'" >> ~/.bashrc && \
-#    echo "alias cs='cd ~/catkin_ws/src'" >> ~/.bashrc && \
-#    echo "alias cw='cd ~/catkin_ws'" >> ~/.bashrc
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    mkdir -p /home/ubuntu/catkin_ws/src && \
+    /bin/bash -c "source /opt/ros/noetic/setup.bash; cd /home/ubuntu/catkin_ws/src; catkin_init_workspace" && \
+    /bin/bash -c "source /opt/ros/noetic/setup.bash; cd /home/ubuntu/catkin_ws; catkin build" && \
+    cd /home/ubuntu/catkin_ws/src && \
+    git clone https://github.com/KBKN-Autonomous-Robotics-Lab/igvc2024_src.git && \
+    rm igvc2024_src/CMakeLists.txt && \
+    mv igvc2024_src/* . && \mv igvc2024_src/.git* . && \
+    rm -rf igvc2024_src && \
+    bash setup.sh && \
+    /bin/bash -c "source /opt/ros/noetic/setup.bash" && \
+    catkin clean --yes && \
+    chown -R $USER:$USER $HOME && \
+    echo "source /home/ubuntu/catkin_ws/devel/setup.bash" >> ~/.bashrc && \
+    echo "export ROS_WORKSPACE=/home/ubuntu/catkin_ws" >> ~/.bashrc && \
+    echo "alias cm='cd ~/catkin_ws;catkin build'" >> ~/.bashrc && \
+    echo "alias cs='cd ~/catkin_ws/src'" >> ~/.bashrc && \
+    echo "alias cw='cd ~/catkin_ws'" >> ~/.bashrc
 
-#RUN python3 -m pip install --user --upgrade --no-cache-dir --no-warn-script-location pip && \
-#    chown -R $USER:$USER $HOME/.local/
+RUN python3 -m pip install --user --upgrade --no-cache-dir --no-warn-script-location pip && \
+    chown -R $USER:$USER $HOME/.local/
