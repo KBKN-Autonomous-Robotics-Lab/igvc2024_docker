@@ -43,12 +43,6 @@ RUN apt-get update && \
     gedit \
     gimp 
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    mkdir -p /home/ubuntu/catkin_ws/src && \
-    /bin/bash -c "source /opt/ros/noetic/setup.bash; cd /home/ubuntu/catkin_ws/src; catkin_init_workspace" && \
-    /bin/bash -c "source /opt/ros/noetic/setup.bash; cd /home/ubuntu/catkin_ws; catkin build"
-
 #RUN apt-get update && \
 #    apt-get upgrade -y && \
 #    mkdir -p /home/ubuntu/catkin_ws/src && \
