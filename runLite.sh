@@ -8,6 +8,6 @@ docker run \
     -e SHELL=/bin/bash \
     --shm-size=512m \
     --entrypoint '/startup.sh'\
-    tsukuba2023
+    igvc2024
     
     #-e RESOLUTION=1920x1080 \
