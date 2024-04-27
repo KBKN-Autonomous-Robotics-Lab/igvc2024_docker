@@ -63,5 +63,7 @@ RUN apt-get update && \
     echo "alias cs='cd ~/catkin_ws/src'" >> ~/.bashrc && \
     echo "alias cw='cd ~/catkin_ws'" >> ~/.bashrc
 
-RUN python3 -m pip install --user --upgrade --no-cache-dir --no-warn-script-location pip && \
+RUN python3 -m pip install --user --upgrade --no-cache-dir --no-warn-script-location \
+    pip \
+    pymodbus==2.5.3 && \
     chown -R $USER:$USER $HOME/.local/
