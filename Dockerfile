@@ -85,7 +85,6 @@ RUN apt-get update && \
     sed -i "s/192.168.1.5/192.168.3.1/g" /home/ubuntu/livox_ws/src/livox_ros_driver2/config/MID360_config.json && \
     # Update lidar IP address
     sed -i "s/192.168.1.12/192.168.3.201/g" /home/ubuntu/livox_ws/src/livox_ros_driver2/config/MID360_config.json && \
-    echo "source /home/ubuntu/livox_ws/devel/setup.bash" >> ~/.bashrc && \
     echo "alias lsl='cd ~/livox_ws/src/livox_ros_driver2'" >> ~/.bashrc && \
     echo "alias lw='cd ~/livox_ws'" >> ~/.bashrc
 
