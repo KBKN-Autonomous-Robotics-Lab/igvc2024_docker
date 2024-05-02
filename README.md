@@ -15,6 +15,7 @@ Browse http://{IP_ADDRESS_OF_YOUR_PC}:6080/
 Container
 ~~~
 cd ~/livox_ws/src/livox_ros_driver2 && ./build.sh ROS1
+source ~/livox_ws/devel/setup.sh
 cd ~/catkin_ws && catkin build
 source ~/.bashrc
 ~~~
