@@ -1,13 +1,10 @@
 docker run \
-    -p 6080:80 \
-    -p 2222:22 \
-    -p 10940:10940 \
-    -p 2368:2368/udp \
-    -p 8308:8308/udp \
     -e HOME=/home/ubuntu \
     -e SHELL=/bin/bash \
     --shm-size=512m \
+    --privileged -it \
+    --net=host \
     --entrypoint '/startup.sh'\
-    igvc2024
+    igvc2024/livox
     
     #-e RESOLUTION=1920x1080 \
