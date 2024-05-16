@@ -7,9 +7,10 @@ This is a project for IGVC2024.
 ~~~
 git clone https://github.com/KBKN-Autonomous-Robotics-Lab/igvc2024_docker.git
 cd igvc2024_docker
-./build.sh
-./runLite.sh
+./*_build.sh
+./*_runLite.sh
 ~~~
+Put velodyne or livox in *. \
 Browse http://{IP_ADDRESS_OF_YOUR_PC}:6080/
 
 #### Container🧰
