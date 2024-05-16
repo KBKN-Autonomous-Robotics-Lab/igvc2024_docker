@@ -18,6 +18,7 @@ docker run \
 	--device /dev/ttyACM2:/dev/ttyACM2:mwr \
 	--device /dev/E-Stop:/dev/E-Stop:mwr \
 	--device /dev/sensors/LED:/dev/sensors/LED:mwr \
-	igvc2024
+	igvc2024/velodyne
 	
 	#-e RESOLUTION=1920x1080
+	

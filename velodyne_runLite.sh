@@ -8,6 +8,6 @@ docker run \
     -e SHELL=/bin/bash \
     --shm-size=512m \
     --entrypoint '/startup.sh'\
-    igvc2024
+    igvc2024/velodyne
     
     #-e RESOLUTION=1920x1080 \
